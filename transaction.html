@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transaction</title>
+    <title>引き出し</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -24,7 +24,7 @@
         }
         
         .container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
             width: 100%;
         }
@@ -139,45 +139,63 @@
             animation-delay: 5.5s;
         }
         
-        .success-notice {
-            background: #e8f5e9;
-            border-left: 4px solid #28a745;
-            padding: 20px;
+        .important-notice {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 25px;
             margin-bottom: 25px;
-            border-radius: 6px;
+            border-radius: 8px;
         }
         
-        .success-notice h2 {
-            color: #2e7d32;
-            margin-bottom: 10px;
-            font-size: 18px;
+        .important-notice h2 {
+            color: #c62828;
+            margin-bottom: 15px;
+            font-size: 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
         
-        .message {
-            margin-bottom: 25px;
+        .section {
+            margin-bottom: 30px;
         }
         
-        .message p {
+        .section h3 {
+            color: #2c3e50;
             margin-bottom: 15px;
-            font-size: 16px;
+            font-size: 18px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
         }
         
-        .final-fee {
+        .purpose-list {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .purpose-list ol {
+            margin-left: 20px;
+        }
+        
+        .purpose-list li {
+            margin-bottom: 10px;
+        }
+        
+        .fee-details {
             background: #fff3e0;
             padding: 20px;
             border-radius: 8px;
-            margin: 25px 0;
-            border: 1px solid #ffd54f;
+            margin: 15px 0;
         }
         
-        .final-fee h3 {
-            color: #e65100;
-            margin-bottom: 15px;
-            font-size: 18px;
-            text-align: center;
+        .fee-details ul {
+            margin-left: 20px;
+        }
+        
+        .fee-details li {
+            margin-bottom: 8px;
         }
         
         .fee-amount {
@@ -193,20 +211,17 @@
         }
         
         .bank-info {
-            background: #f8f9fa;
+            background: #e3f2fd;
             padding: 25px;
             border-radius: 8px;
             margin: 25px 0;
-            border: 1px solid #e9ecef;
         }
         
         .bank-info h3 {
-            color: #2c3e50;
+            color: #1565c0;
             margin-bottom: 20px;
             font-size: 18px;
             text-align: center;
-            border-bottom: 1px solid #dee2e6;
-            padding-bottom: 10px;
         }
         
         .bank-details {
@@ -219,12 +234,12 @@
             background: white;
             padding: 15px;
             border-radius: 6px;
-            border: 1px solid #e9ecef;
+            border: 1px solid #bbdefb;
         }
         
         .bank-label {
             font-weight: bold;
-            color: #495057;
+            color: #1565c0;
             margin-bottom: 5px;
             font-size: 14px;
         }
@@ -232,24 +247,16 @@
         .bank-value {
             font-size: 16px;
             font-weight: bold;
-            color: #2c3e50;
+            color: #0d47a1;
         }
         
-        .urgent-notice {
-            background: #ffebee;
+        .final-note {
+            background: #f8f9fa;
             padding: 20px;
-            border-radius: 8px;
             margin: 25px 0;
-            border-left: 4px solid #f44336;
-        }
-        
-        .urgent-notice h3 {
-            color: #c62828;
-            margin-bottom: 10px;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e9ecef;
         }
         
         .action-button {
@@ -313,7 +320,7 @@
                 padding: 20px;
             }
             
-            .success-notice, .final-fee, .bank-info, .urgent-notice {
+            .important-notice, .bank-info, .final-note {
                 padding: 20px;
             }
             
@@ -372,67 +379,86 @@
 
     <div class="container">
         <div class="header">
-            <h1>最終手続きのご案内</h1>
+            <h1>重要なお知らせ</h1>
         </div>
         
         <div class="content-box">
-            <div class="success-notice">
+            <div class="important-notice">
                 <h2>
-                    <i class="fas fa-check-circle"></i>
-                    前回の支払いが完了しました
+                    <i class="fas fa-exclamation-circle"></i>
+                    【重要なお知らせ】一時所得税および資金清算手数料について
                 </h2>
-                <p>前回の40,000円の支払いが問題なく処理されたことをご報告いたします。</p>
+                <p>
+                    平素より格別のご愛顧を賜り、誠にありがとうございます。
+                </p>
+                <p style="margin-top: 15px">
+                    このたび、［特定取引（例：大口送金、資金入金、口座処理など）］に関して、一時所得税および資金清算手数料として150,000円が必要となりましたことをお知らせいたします。
+                </p>
             </div>
             
-            <div class="message">
-                <p>取引の最終段階に進むにあたり、手続きを完了させるためには、メンテナンスおよびセキュリティ移管手数料の支払いが必要です。</p>
+            <div class="section">
+                <h3>手数料の目的</h3>
+                <p>本手数料は、金融取引を安全かつ円滑に処理するために適用され、以下の内容をカバーします：</p>
+                
+                <div class="purpose-list">
+                    <ol>
+                        <li>取引確認：送金の正当性を確認し、送金者および受取人情報の検証、内部規定や法的要件への適合を確保すること。</li>
+                        <li>資金清算：送金資金が正しく清算され、受取人口座に確実に入金されることを保証し、必要に応じて中継銀行での処理を行うこと。</li>
+                    </ol>
+                </div>
             </div>
             
-            <div class="final-fee">
-                <h3>最終料金について</h3>
-                <p>残りの確認およびセキュリティ手続き完了のために、最終料金として以下の金額の支払いが必要となります。</p>
+            <div class="section">
+                <h3>手数料の詳細</h3>
                 
                 <div class="fee-amount">
-                    ¥80,000（八万円）
+                    ¥150,000
                 </div>
                 
-                <p>この支払いが確認され次第、取引は完全に承認され、資金は即座に引き出せるようになります。</p>
+                <div class="fee-details">
+                    <ul>
+                        <li><strong>適用対象：</strong>最終手続きに必要</li>
+                        <li><strong>重要性：</strong>500万円の取引清算を完了させるために不可欠</li>
+                    </ul>
+                </div>
             </div>
             
-            <div class="bank-info">
-                <h3>お支払い先口座情報</h3>
-                <div class="bank-details">
-                    <div class="bank-item">
-                        <div class="bank-label">銀行名</div>
-                        <div class="bank-value">福島信用金庫</div>
-                    </div>
-                    <div class="bank-item">
-                        <div class="bank-label">支店名</div>
-                        <div class="bank-value">霊山おてひめ支店</div>
-                    </div>
-                    <div class="bank-item">
-                        <div class="bank-label">口座番号</div>
-                        <div class="bank-value">0155989</div>
-                    </div>
-                    <div class="bank-item">
-                        <div class="bank-label">口座種別</div>
-                        <div class="bank-value">普通預金</div>
-                    </div>
-                    <div class="bank-item">
-                        <div class="bank-label">口座名義</div>
-                        <div class="bank-value">阿部孝男</div>
+            <div class="section">
+                <h3>振込先口座</h3>
+                
+                <div class="bank-info">
+                    <h3>振込先情報</h3>
+                    <div class="bank-details">
+                        <div class="bank-item">
+                            <div class="bank-label">銀行名</div>
+                            <div class="bank-value">福島信用金庫</div>
+                        </div>
+                        <div class="bank-item">
+                            <div class="bank-label">支店名</div>
+                            <div class="bank-value">霊山おてひめ支店</div>
+                        </div>
+                        <div class="bank-item">
+                            <div class="bank-label">口座番号</div>
+                            <div class="bank-value">0155989</div>
+                        </div>
+                        <div class="bank-item">
+                            <div class="bank-label">口座種別</div>
+                            <div class="bank-value">普通預金</div>
+                        </div>
+                        <div class="bank-item">
+                            <div class="bank-label">口座名義</div>
+                            <div class="bank-value">阿部孝男</div>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="urgent-notice">
-                <h3>
-                    <i class="fas fa-exclamation-circle"></i>
-                    重要なお願い
-                </h3>
-                <p>資金の最終的な解放が遅れないよう、速やかにお支払いを完了してください。</p>
+            <div class="final-note">
+                <p>お取引を円滑に完了させるため、速やかにお支払いくださいますようお願い申し上げます。</p>
+                <p style="margin-top: 10px">
+                    なお、この手数料は、大口金融取引の安全性、信頼性、および法令遵守を維持するために不可欠なものです。
+                </p>
             </div>
-            
         </div>
         
         <footer>
@@ -467,12 +493,12 @@
             let progress = 0;
             const steps = [
                 { percent: 10, text: "初期化中..." },
-                { percent: 25, text: "前回の支払いを確認中..." },
-                { percent: 40, text: "取引データを検証中..." },
-                { percent: 60, text: "最終手続きを準備中..." },
-                { percent: 75, text: "口座情報を確認中..." },
+                { percent: 25, text: "取引データを確認中..." },
+                { percent: 40, text: "手数料規定を検証中..." },
+                { percent: 60, text: "口座情報を確認中..." },
+                { percent: 75, text: "セキュリティチェック..." },
                 { percent: 90, text: "最終確認..." },
-                { percent: 97, text: "....." }
+                { percent: 100, text: "完了！" }
             ];
 
             const interval = setInterval(() => {
@@ -486,7 +512,7 @@
                     loadingSteps.textContent = currentStep.text;
                 }
                 
-                if (progress >= 97) {
+                if (progress >= 100) {
                     clearInterval(interval);
                 }
             }, 50); // Update every 50ms for 5 seconds total
